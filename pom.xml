@@ -18,6 +18,7 @@
 
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
         <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
+        <versions.java-security-toolkit>1.2.1</versions.java-security-toolkit>
     </properties>
 
     <!-- tag::spring-version[] -->
@@ -87,6 +88,11 @@
                 <version>${vaadin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.github.pixee</groupId>
+                <artifactId>java-security-toolkit</artifactId>
+                <version>${versions.java-security-toolkit}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -161,6 +167,10 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.pixee</groupId>
+            <artifactId>java-security-toolkit</artifactId>
         </dependency>
     </dependencies>
 
