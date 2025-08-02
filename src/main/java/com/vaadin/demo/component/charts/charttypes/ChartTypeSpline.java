@@ -1,5 +1,6 @@
 package com.vaadin.demo.component.charts.charttypes;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import com.vaadin.demo.DemoExporter;
@@ -20,7 +21,7 @@ import com.vaadin.flow.router.Route;
 @Route("chart-type-spline")
 public class ChartTypeSpline extends Div {
     public ChartTypeSpline() {
-        final Random random = new Random();
+        final Random random = new SecureRandom();
 
         // tag::snippet[]
         Chart chart = new Chart(ChartType.SPLINE);
